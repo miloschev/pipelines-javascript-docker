@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: miloschevpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: miloschevpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: miloschevpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: miloschevpipelinesjavascriptdocker 
+          image: contregkubernetees.azurecr.io/miloschevpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
